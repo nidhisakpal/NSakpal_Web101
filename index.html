@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nidhi's Hiking Group</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="#whattoexpect">What to Expect</a></li>
+                <li><a href="#upcomingevents">Upcoming Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+
+        <img id="header-img" src="./img/hiking.png" alt="Group hiking in mountains"/>
+        
+        <div class="header-content">
+            <h1>Nidhi's Hiking Group</h1>
+            <h2>"The best views come after the hardest climbs."</h2>
+            <button type="button">Sign Up</button>
+            <button onclick="window.location.href='#contact'">Contact</button>
+        </div>
+
+        <div class="container">
+            <section>
+                <h2>Hiking and Camping Trips</h2>
+                <p>Hey! Do you love to hike and camp? I'm Nidhi Sakpal and I plan and host local hiking + camping trips in the NJ/NY area. I'm passionate about conservation and connecting with nature. These trips are intended to build a community of like-minded people who appreciate the outdoors.</p>
+            </section>
+
+            <section id="whattoexpect">
+                <h3>What to Remember/ Bring Trips & Camps</h3>
+                <h4>The goal is to have fun, respectful, and always kind.</h4>
+                <ul>
+                    <li><b>Arrive on Time</b> <i>After you've sent in your RSVP, you're commited. Make sure to honor your commitment and respect other people's time.</i></li>
+                    <li><b>Take Care of Yourself</b> <i>Make sure to bring any necessary medication, the right shoes + clothing, and anything you anticipate needing to make sure you have a safe and enjoyable experience.</i></li>
+                    <li><b>Be a Good Teammate</b> <i>Be friendly and inclusive — especially to people who may be new or quiet. Help clean up, carry things, and support others when needed. Respect everyone's space and belongings. Listen and follow instructions — they're there for everyone's safety.</i></li>
+                </ul>
+            </section>
+
+            <section id="upcomingevents">
+                <h2>Upcoming Events</h2>
+                <h3>Event Schedule</h3>
+
+                <div class="events-grid">
+                    <div class="event-card">
+                        <img src="./img/Hiking.png" alt="Briarcliff Park Trail"/>
+                        <div class="event-card-content">
+                            <h3>Braircliff Park Trail Hike</h3>
+                            <p>Join us for a scenic hike through Briarcliff Park on April 17th. This moderate 5-mile loop offers beautiful views of the Hudson Valley.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <img src="./img/example.png" alt="Mountain Lakes Trail"/>
+                        <div class="event-card-content">
+                            <h3>Mountain Lakes Trail Hike</h3>
+                            <p>Explore the serene Mountain Lakes Trail on May 15th. This easy 3-mile hike is perfect for beginners and features several picturesque lakes.</p>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <img src="./img/example.png" alt="Acadia National Park"/>
+                        <div class="event-card-content">
+                            <h3>Acadia National Park Summer Trip</h3>
+                            <p>Our annual summer trip to Acadia National Park from June 20-23. Experience coastal hikes, sunrise on Cadillac Mountain, and camping under the stars.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>If you have any questions about upcoming trips or want to suggest a new hiking location, please email me at: <a href="mailto:nidhisakpal@gmail.com">nidhisakpal@gmail.com</a></p>
+            </section>
+
+            <section id="links">
+                <h2>Helpful Links</h2>
+                <a class="block" href="https://www.alltrails.com">
+                    <article>
+                        <h3>AllTrails</h3>
+                        <p>Find hiking trails near you with reviews, photos, and difficulty ratings.</p>
+                    </article>
+                </a>
+                <a class="block" href="https://www.rei.com/learn/expert-advice">
+                    <article>
+                        <h3>REI Expert Advice</h3>
+                        <p>Hiking and camping gear guides and expert tips for outdoor adventures.</p>
+                    </article>
+                </a>
+            </section>
+
+            <section id="RSVP">
+                <h2>Join Us! RSVP</h2>
+                <div class="rsvp-section">
+                    <div class="rsvp-description">
+                        <h3>Join the Fun!</h3>
+                        <p>We're excited to have you at our event! Please RSVP using the form so we can prepare for your arrival. After submitting, you'll receive a confirmation email with all the details you'll need for the trip.</p>
+                        <p>Our trips typically have 10-15 participants and are suitable for all skill levels unless otherwise noted. Don't hesitate to reach out if you have any questions about difficulty levels or required gear.</p>
+                    </div>
+                    <div class="rsvp-form-container">
+                        <form id="rsvp-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Your full name">
+                        
+                            <label for="homestate">Home State:</label>
+                            <input type="text" id="homestate" placeholder="Where you're from">
+                        
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" placeholder="Your email address">
+                        
+                            <input type="submit" value="Submit">
+                        </form>
+                        <ul id="rsvp-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- Modal Structure -->
+<div id="thank-you-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Thank You, <span id="modal-name"></span>!</h2>
+      <p>We're excited to have you join us from <span id="modal-state"></span>!</p>
+      <div class="modal-animation">
+        <img src="./img/hike.png" alt="Happy hiker" id="animated-image">
+      </div>
+      <p>You'll receive a confirmation email shortly.</p>
+    </div>
+  </div>
+        <footer>
+            <p>&copy; 2025 Nidhi's Hiking Group. All rights reserved.</p>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
